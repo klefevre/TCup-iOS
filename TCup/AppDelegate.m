@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SocketService.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    [[SocketService sharedInstance] connect:@"http://192.168.100.183:1337"];
+
     return YES;
 }
 

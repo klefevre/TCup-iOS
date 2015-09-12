@@ -6,14 +6,16 @@
 //  Copyright (c) 2015 BeMyApp. All rights reserved.
 //
 
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/RACEXTScope.h>
+
 #import "CupViewController.h"
 
-#import <SIOSocket/SIOSocket.h>
+#import "SocketService.h"
 
 @interface CupViewController ()
 
 @property (nonatomic, weak) IBOutlet UIProgressView *progressView;
-@property (nonatomic, strong) SIOSocket *socket;
 
 @end
 
@@ -24,26 +26,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [SIOSocket socketWithHost: @"http://192.168.100.183:1337" response:^(SIOSocket *socket) {
-        self.socket = socket;
-
-        [socket on:@"connected" callback:^(NSArray *args) {
-            NSLog(@"args: %@", args);
-        }];
-
-        __block CGFloat maxTemp = 0;
-        [socket on:@"celsius" callback:^(NSArray *args) {
-            NSNumber *tempNumber = [args firstObject];
-            if (tempNumber != nil) {
-                CGFloat temp = [tempNumber floatValue];
-                if (temp > maxTemp) {
-                    maxTemp = temp;
-                }
-                self.progressView.progress = temp / maxTemp;
+    __block CGFloat maxTemp = 0.1;
+    @weakify(self);
+    [[SocketService sharedInstance].socket on:@"celsius" callback:^(NSArray *args) {
+        @strongify(self);
+        NSNumber *tempNumber = [args firstObject];
+        if (tempNumber != nil) {
+            CGFloat temp = [tempNumber floatValue];
+            if (temp > maxTemp) {
+                maxTemp = temp;
             }
-            NSLog(@"args: %@", args);
-
-        }];
+            self.progressView.progress = temp / maxTemp;
+        }
+        NSLog(@"args: %@", args);
     }];
 }
 

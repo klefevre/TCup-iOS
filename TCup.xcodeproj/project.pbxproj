@@ -14,6 +14,7 @@
 		F71ECF891BA4597800410953 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F71ECF881BA4597800410953 /* Images.xcassets */; };
 		F71ECF8C1BA4597800410953 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F71ECF8A1BA4597800410953 /* LaunchScreen.xib */; };
 		F71ECF981BA4597800410953 /* TCupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F71ECF971BA4597800410953 /* TCupTests.m */; };
+		F76783B21BA4DEFF001292D7 /* SocketService.m in Sources */ = {isa = PBXBuildFile; fileRef = F76783B11BA4DEFF001292D7 /* SocketService.m */; };
 		F7D5525C1BA4C26600334ECB /* SmokeParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = F7D5525A1BA4C26600334ECB /* SmokeParticle.sks */; };
 		F7D5525D1BA4C26600334ECB /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D5525B1BA4C26600334ECB /* spark.png */; };
 		F7D5527A1BA4C7DA00334ECB /* TeaCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D5526C1BA4C7DA00334ECB /* TeaCollectionViewController.m */; };
@@ -47,6 +48,8 @@
 		F71ECF911BA4597800410953 /* TCupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71ECF961BA4597800410953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F71ECF971BA4597800410953 /* TCupTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCupTests.m; sourceTree = "<group>"; };
+		F76783B01BA4DEFF001292D7 /* SocketService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketService.h; sourceTree = "<group>"; };
+		F76783B11BA4DEFF001292D7 /* SocketService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketService.m; sourceTree = "<group>"; };
 		F7D5525A1BA4C26600334ECB /* SmokeParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = SmokeParticle.sks; path = ../SmokeParticle.sks; sourceTree = "<group>"; };
 		F7D5525B1BA4C26600334ECB /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = ../spark.png; sourceTree = "<group>"; };
 		F7D5526B1BA4C7DA00334ECB /* TeaCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeaCollectionViewController.h; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 			children = (
 				F71ECF7F1BA4597800410953 /* AppDelegate.h */,
 				F71ECF801BA4597800410953 /* AppDelegate.m */,
+				F76783AF1BA4DEBF001292D7 /* Services */,
 				F7D5526F1BA4C7DA00334ECB /* Models */,
 				F7D552771BA4C7DA00334ECB /* Views */,
 				F7D5526A1BA4C7DA00334ECB /* Controllers */,
@@ -159,6 +163,15 @@
 				F71ECF961BA4597800410953 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F76783AF1BA4DEBF001292D7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F76783B01BA4DEFF001292D7 /* SocketService.h */,
+				F76783B11BA4DEFF001292D7 /* SocketService.m */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		F7D5526A1BA4C7DA00334ECB /* Controllers */ = {
@@ -342,6 +355,7 @@
 				F7D552881BA4CEE600334ECB /* CupViewController.m in Sources */,
 				F7D5527C1BA4C7DA00334ECB /* Tea.m in Sources */,
 				F7D5527A1BA4C7DA00334ECB /* TeaCollectionViewController.m in Sources */,
+				F76783B21BA4DEFF001292D7 /* SocketService.m in Sources */,
 				F71ECF811BA4597800410953 /* AppDelegate.m in Sources */,
 				F7D5527F1BA4C7DA00334ECB /* TeaCollectionViewCell.m in Sources */,
 				F71ECF7E1BA4597800410953 /* main.m in Sources */,
