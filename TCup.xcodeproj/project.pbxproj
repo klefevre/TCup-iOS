@@ -14,6 +14,7 @@
 		F71ECF891BA4597800410953 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F71ECF881BA4597800410953 /* Images.xcassets */; };
 		F71ECF8C1BA4597800410953 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F71ECF8A1BA4597800410953 /* LaunchScreen.xib */; };
 		F71ECF981BA4597800410953 /* TCupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F71ECF971BA4597800410953 /* TCupTests.m */; };
+		F7D552231BA47C4200334ECB /* BTDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D552221BA47C4200334ECB /* BTDiscovery.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		F71ECF911BA4597800410953 /* TCupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71ECF961BA4597800410953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F71ECF971BA4597800410953 /* TCupTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCupTests.m; sourceTree = "<group>"; };
+		F7D552211BA47C4200334ECB /* BTDiscovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTDiscovery.h; sourceTree = "<group>"; };
+		F7D552221BA47C4200334ECB /* BTDiscovery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTDiscovery.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		F71ECF7A1BA4597800410953 /* TCup */ = {
 			isa = PBXGroup;
 			children = (
+				F7D552241BA47C4700334ECB /* Bluetooth */,
 				F71ECF7F1BA4597800410953 /* AppDelegate.h */,
 				F71ECF801BA4597800410953 /* AppDelegate.m */,
 				F71ECF821BA4597800410953 /* ViewController.h */,
@@ -117,6 +121,15 @@
 				F71ECF961BA4597800410953 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7D552241BA47C4700334ECB /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				F7D552211BA47C4200334ECB /* BTDiscovery.h */,
+				F7D552221BA47C4200334ECB /* BTDiscovery.m */,
+			);
+			name = Bluetooth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +234,7 @@
 			files = (
 				F71ECF841BA4597800410953 /* ViewController.m in Sources */,
 				F71ECF811BA4597800410953 /* AppDelegate.m in Sources */,
+				F7D552231BA47C4200334ECB /* BTDiscovery.m in Sources */,
 				F71ECF7E1BA4597800410953 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +430,7 @@
 				F71ECF9D1BA4597800410953 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F71ECF9E1BA4597800410953 /* Build configuration list for PBXNativeTarget "TCupTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +439,7 @@
 				F71ECFA01BA4597800410953 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
