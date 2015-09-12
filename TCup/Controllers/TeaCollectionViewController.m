@@ -9,7 +9,6 @@
 #import "TeaCollectionViewController.h"
 #import "Tea.h"
 #import "TeaCollectionViewCell.h"
-#import "Tea"
 
 @interface TeaCollectionViewController ()
 
