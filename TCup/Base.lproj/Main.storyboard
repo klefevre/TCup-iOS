@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dlo-sj-JKG">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Select your tea-->
@@ -97,12 +98,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3v2-Ev-60e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1091" y="354"/>
+            <point key="canvasLocation" x="915" y="934"/>
         </scene>
-        <!--View Controller-->
+        <!--Cup View Controller-->
         <scene sceneID="nrI-Jy-tbi">
             <objects>
-                <viewController id="Kko-zG-Vyy" sceneMemberID="viewController">
+                <viewController id="Kko-zG-Vyy" customClass="CupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qqd-8T-b8B"/>
                         <viewControllerLayoutGuide type="bottom" id="shG-ct-8hW"/>
@@ -110,9 +111,36 @@
                     <view key="view" contentMode="scaleToFill" id="Jsl-mJ-7sW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9vO-0b-XP7">
+                                <rect key="frame" x="36" y="479" width="248" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="iYm-GW-WBR"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </progressView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tea-Cup" translatesAutoresizingMaskIntoConstraints="NO" id="9ZA-NU-ODU">
+                                <rect key="frame" x="10" y="84" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8DR-9A-bHZ"/>
+                                    <constraint firstAttribute="height" constant="300" id="IRG-0T-ry3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.74117647060000003" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9vO-0b-XP7" firstAttribute="top" secondItem="9ZA-NU-ODU" secondAttribute="bottom" constant="95" id="Clh-8g-JKL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9vO-0b-XP7" secondAttribute="trailing" constant="20" id="EP9-xg-NC6"/>
+                            <constraint firstItem="9ZA-NU-ODU" firstAttribute="top" secondItem="Qqd-8T-b8B" secondAttribute="bottom" constant="20" id="dKP-DK-0Gs"/>
+                            <constraint firstAttribute="centerX" secondItem="9ZA-NU-ODU" secondAttribute="centerX" id="oJ0-jE-Zzl"/>
+                            <constraint firstItem="9vO-0b-XP7" firstAttribute="leading" secondItem="Jsl-mJ-7sW" secondAttribute="leadingMargin" constant="20" id="zyB-oJ-0gC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RqP-fD-ypJ"/>
+                    <connections>
+                        <outlet property="progressView" destination="9vO-0b-XP7" id="HB3-V3-AGF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boz-30-q0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -193,6 +221,9 @@
             <point key="canvasLocation" x="-267" y="354"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Tea-Cup" width="300" height="300"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
