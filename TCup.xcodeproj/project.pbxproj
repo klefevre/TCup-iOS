@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01827581C5C47872B0162C97 /* libPods-TCup.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 068530F54EAE5C52601CC4A3 /* libPods-TCup.a */; };
 		F71ECF7E1BA4597800410953 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F71ECF7D1BA4597800410953 /* main.m */; };
 		F71ECF811BA4597800410953 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F71ECF801BA4597800410953 /* AppDelegate.m */; };
 		F71ECF871BA4597800410953 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71ECF851BA4597800410953 /* Main.storyboard */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		068530F54EAE5C52601CC4A3 /* libPods-TCup.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TCup.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81DA729D6F8A110CE3A1613B /* Pods-TCup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCup/Pods-TCup.debug.xcconfig"; sourceTree = "<group>"; };
 		F71ECF781BA4597800410953 /* TCup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71ECF7C1BA4597800410953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F71ECF7D1BA4597800410953 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		F7D552831BA4CDBE00334ECB /* KettleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KettleViewController.m; sourceTree = "<group>"; };
 		F7D552861BA4CEE600334ECB /* CupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CupViewController.h; sourceTree = "<group>"; };
 		F7D552871BA4CEE600334ECB /* CupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CupViewController.m; sourceTree = "<group>"; };
+		FAC2F8432D9548ED610D3DAE /* Pods-TCup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCup.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCup/Pods-TCup.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01827581C5C47872B0162C97 /* libPods-TCup.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +81,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B9B083DF1C1F5DA12084E07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81DA729D6F8A110CE3A1613B /* Pods-TCup.debug.xcconfig */,
+				FAC2F8432D9548ED610D3DAE /* Pods-TCup.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E53E3DEF831FAFE8F99013CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				068530F54EAE5C52601CC4A3 /* libPods-TCup.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F71ECF6F1BA4597800410953 = {
 			isa = PBXGroup;
 			children = (
 				F71ECF7A1BA4597800410953 /* TCup */,
 				F71ECF941BA4597800410953 /* TCupTests */,
 				F71ECF791BA4597800410953 /* Products */,
+				7B9B083DF1C1F5DA12084E07 /* Pods */,
+				E53E3DEF831FAFE8F99013CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,9 +208,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F71ECF9B1BA4597800410953 /* Build configuration list for PBXNativeTarget "TCup" */;
 			buildPhases = (
+				B7A8FFBA73883E4ABAB73939 /* Check Pods Manifest.lock */,
 				F71ECF741BA4597800410953 /* Sources */,
 				F71ECF751BA4597800410953 /* Frameworks */,
 				F71ECF761BA4597800410953 /* Resources */,
+				F30DCB0E1C44A678CB2A70D8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,6 +299,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B7A8FFBA73883E4ABAB73939 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F30DCB0E1C44A678CB2A70D8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TCup/Pods-TCup-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F71ECF741BA4597800410953 /* Sources */ = {
@@ -409,6 +468,7 @@
 		};
 		F71ECF9C1BA4597800410953 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81DA729D6F8A110CE3A1613B /* Pods-TCup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TCup/Info.plist;
@@ -419,6 +479,7 @@
 		};
 		F71ECF9D1BA4597800410953 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAC2F8432D9548ED610D3DAE /* Pods-TCup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TCup/Info.plist;
