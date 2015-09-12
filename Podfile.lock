@@ -1,10 +1,10 @@
 PODS:
-  - SocketRocket (0.4.1)
+  - SIOSocket (0.2.0)
 
 DEPENDENCIES:
-  - SocketRocket (~> 0.4.1)
+  - SIOSocket (~> 0.2.0)
 
 SPEC CHECKSUMS:
-  SocketRocket: ee0b5c34182d37bb4f1f8d628bbe737718126daa
+  SIOSocket: 2facc0bd02ae72d98c223634a46dd8ebdf9be321
 
 COCOAPODS: 0.38.2

@@ -3,7 +3,7 @@ xcodeproj 'TCup.xcodeproj'
 platform :ios, '8.0'
 
 target 'TCup' do
-  pod 'SocketRocket', '~> 0.4.1'
+  pod 'SIOSocket', '~> 0.2.0'
 end
 
 target 'TCupTests' do
