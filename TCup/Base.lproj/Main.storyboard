@@ -4,6 +4,120 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
+        <!--Select your tea-->
+        <scene sceneID="YZp-r9-UNk">
+            <objects>
+                <collectionViewController id="nQ8-Fw-Lrq" customClass="TeaCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hEd-Sd-QLY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.74117647060000003" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t30-o9-1N0">
+                            <size key="itemSize" width="153" height="180"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TeaCollectionViewCell" id="Bzc-SM-rFZ" customClass="TeaCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="153" height="180"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sFO-fK-1L2">
+                                            <rect key="frame" x="0.0" y="0.0" width="153" height="115"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tP0-gr-Tv4">
+                                            <rect key="frame" x="8" y="148" width="137" height="24"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="70 C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ph-ap-jY3">
+                                            <rect key="frame" x="8" y="123" width="137" height="24"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="sFO-fK-1L2" firstAttribute="top" secondItem="Bzc-SM-rFZ" secondAttribute="top" id="Gf8-YR-fax"/>
+                                    <constraint firstAttribute="bottom" secondItem="tP0-gr-Tv4" secondAttribute="bottom" constant="8" id="IAe-5K-8Dy"/>
+                                    <constraint firstItem="sFO-fK-1L2" firstAttribute="leading" secondItem="Bzc-SM-rFZ" secondAttribute="leading" id="JqC-na-IAz"/>
+                                    <constraint firstItem="5ph-ap-jY3" firstAttribute="top" secondItem="sFO-fK-1L2" secondAttribute="bottom" constant="8" id="KUj-MW-YG3"/>
+                                    <constraint firstItem="tP0-gr-Tv4" firstAttribute="leading" secondItem="Bzc-SM-rFZ" secondAttribute="leading" constant="8" id="MaI-aj-3bf"/>
+                                    <constraint firstItem="5ph-ap-jY3" firstAttribute="leading" secondItem="Bzc-SM-rFZ" secondAttribute="leading" constant="8" id="SGV-Se-zdg"/>
+                                    <constraint firstAttribute="trailing" secondItem="tP0-gr-Tv4" secondAttribute="trailing" constant="8" id="Xmk-pg-nEK"/>
+                                    <constraint firstAttribute="trailing" secondItem="sFO-fK-1L2" secondAttribute="trailing" id="kMV-xt-e1n"/>
+                                    <constraint firstItem="tP0-gr-Tv4" firstAttribute="top" secondItem="5ph-ap-jY3" secondAttribute="bottom" constant="1" id="kTz-zz-N2Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="5ph-ap-jY3" secondAttribute="trailing" constant="8" id="x3H-RN-VLw"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="durationLabel" destination="tP0-gr-Tv4" id="ywI-WO-4Vg"/>
+                                    <outlet property="imageView" destination="sFO-fK-1L2" id="kAh-7r-Qfh"/>
+                                    <outlet property="temperatureLabel" destination="5ph-ap-jY3" id="IL7-1w-E8d"/>
+                                    <segue destination="Kko-zG-Vyy" kind="push" id="gA6-ci-yPB"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="nQ8-Fw-Lrq" id="J7o-Ob-P9q"/>
+                            <outlet property="delegate" destination="nQ8-Fw-Lrq" id="WH8-ce-w4c"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Select your tea" id="eZJ-tL-ckU"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NbZ-BI-Hi0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="354"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rez-M5-HAr">
+            <objects>
+                <viewController id="ebc-26-IdO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1eH-5m-YnN"/>
+                        <viewControllerLayoutGuide type="bottom" id="gyj-lH-pfi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Pj-w4-dhZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EIY-dY-vBh">
+                                <rect key="frame" x="16" y="546" width="288" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3v2-Ev-60e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1091" y="354"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nrI-Jy-tbi">
+            <objects>
+                <viewController id="Kko-zG-Vyy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qqd-8T-b8B"/>
+                        <viewControllerLayoutGuide type="bottom" id="shG-ct-8hW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jsl-mJ-7sW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RqP-fD-ypJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="boz-30-q0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="354"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -15,13 +129,52 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="69R-P4-9Dz">
+                                <rect key="frame" x="6" y="226" width="308" height="31"/>
+                                <color key="tintColor" red="1" green="0.6705882353" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80°C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDG-10-26I">
+                                <rect key="frame" x="280" y="256" width="32" height="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sélectionner votre température idéale :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gua-i9-sUG">
+                                <rect key="frame" x="8" y="202" width="304" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="afe-aW-52z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20°C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYz-oU-M5o">
+                                <rect key="frame" x="8" y="256" width="32" height="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="69R-P4-9Dz" firstAttribute="top" secondItem="gua-i9-sUG" secondAttribute="bottom" id="EBN-wS-g0a"/>
+                            <constraint firstAttribute="trailing" secondItem="gua-i9-sUG" secondAttribute="trailing" constant="8" id="EV9-L1-O8b"/>
+                            <constraint firstItem="lDG-10-26I" firstAttribute="top" secondItem="69R-P4-9Dz" secondAttribute="bottom" id="Lqv-UF-I0i"/>
+                            <constraint firstItem="gua-i9-sUG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="8" id="erQ-dq-9EQ"/>
+                            <constraint firstAttribute="centerY" secondItem="gua-i9-sUG" secondAttribute="centerY" constant="70" id="hAf-DE-qPP"/>
+                            <constraint firstItem="sYz-oU-M5o" firstAttribute="top" secondItem="69R-P4-9Dz" secondAttribute="bottom" id="i7E-WW-l6o"/>
+                            <constraint firstItem="69R-P4-9Dz" firstAttribute="leading" secondItem="sYz-oU-M5o" secondAttribute="leading" id="o8b-Np-li5"/>
+                            <constraint firstAttribute="trailing" secondItem="69R-P4-9Dz" secondAttribute="trailing" constant="8" id="ssT-AW-mcs"/>
+                            <constraint firstItem="69R-P4-9Dz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="8" id="ws6-wN-Agg"/>
+                            <constraint firstItem="69R-P4-9Dz" firstAttribute="trailing" secondItem="lDG-10-26I" secondAttribute="trailing" id="ybr-Nj-axi"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DUQ-Is-tXy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="160" y="354.05333333333334"/>
+            <point key="canvasLocation" x="901" y="354"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8bh-uC-qx8">
@@ -32,7 +185,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="CAf-bi-fG7"/>
+                        <segue destination="nQ8-Fw-Lrq" kind="relationship" relationship="rootViewController" id="VNu-TJ-9y0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Czd-2g-es4" userLabel="First Responder" sceneMemberID="firstResponder"/>

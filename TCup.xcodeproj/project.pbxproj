@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		F71ECF7E1BA4597800410953 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F71ECF7D1BA4597800410953 /* main.m */; };
 		F71ECF811BA4597800410953 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F71ECF801BA4597800410953 /* AppDelegate.m */; };
-		F71ECF841BA4597800410953 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F71ECF831BA4597800410953 /* ViewController.m */; };
 		F71ECF871BA4597800410953 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71ECF851BA4597800410953 /* Main.storyboard */; };
 		F71ECF891BA4597800410953 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F71ECF881BA4597800410953 /* Images.xcassets */; };
 		F71ECF8C1BA4597800410953 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F71ECF8A1BA4597800410953 /* LaunchScreen.xib */; };
 		F71ECF981BA4597800410953 /* TCupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F71ECF971BA4597800410953 /* TCupTests.m */; };
-		F7D552231BA47C4200334ECB /* BTDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D552221BA47C4200334ECB /* BTDiscovery.m */; };
+		F7D5525C1BA4C26600334ECB /* SmokeParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = F7D5525A1BA4C26600334ECB /* SmokeParticle.sks */; };
+		F7D5525D1BA4C26600334ECB /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D5525B1BA4C26600334ECB /* spark.png */; };
+		F7D5527A1BA4C7DA00334ECB /* TeaCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D5526C1BA4C7DA00334ECB /* TeaCollectionViewController.m */; };
+		F7D5527C1BA4C7DA00334ECB /* Tea.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D552711BA4C7DA00334ECB /* Tea.m */; };
+		F7D5527F1BA4C7DA00334ECB /* TeaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D552791BA4C7DA00334ECB /* TeaCollectionViewCell.m */; };
+		F7D552841BA4CDBE00334ECB /* KettleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D552831BA4CDBE00334ECB /* KettleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,16 +37,22 @@
 		F71ECF7D1BA4597800410953 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F71ECF7F1BA4597800410953 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F71ECF801BA4597800410953 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F71ECF821BA4597800410953 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F71ECF831BA4597800410953 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F71ECF861BA4597800410953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F71ECF881BA4597800410953 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F71ECF8B1BA4597800410953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F71ECF911BA4597800410953 /* TCupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71ECF961BA4597800410953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F71ECF971BA4597800410953 /* TCupTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCupTests.m; sourceTree = "<group>"; };
-		F7D552211BA47C4200334ECB /* BTDiscovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTDiscovery.h; sourceTree = "<group>"; };
-		F7D552221BA47C4200334ECB /* BTDiscovery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTDiscovery.m; sourceTree = "<group>"; };
+		F7D5525A1BA4C26600334ECB /* SmokeParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = SmokeParticle.sks; path = ../SmokeParticle.sks; sourceTree = "<group>"; };
+		F7D5525B1BA4C26600334ECB /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = ../spark.png; sourceTree = "<group>"; };
+		F7D5526B1BA4C7DA00334ECB /* TeaCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeaCollectionViewController.h; sourceTree = "<group>"; };
+		F7D5526C1BA4C7DA00334ECB /* TeaCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeaCollectionViewController.m; sourceTree = "<group>"; };
+		F7D552701BA4C7DA00334ECB /* Tea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tea.h; sourceTree = "<group>"; };
+		F7D552711BA4C7DA00334ECB /* Tea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tea.m; sourceTree = "<group>"; };
+		F7D552781BA4C7DA00334ECB /* TeaCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeaCollectionViewCell.h; sourceTree = "<group>"; };
+		F7D552791BA4C7DA00334ECB /* TeaCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeaCollectionViewCell.m; sourceTree = "<group>"; };
+		F7D552821BA4CDBE00334ECB /* KettleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KettleViewController.h; sourceTree = "<group>"; };
+		F7D552831BA4CDBE00334ECB /* KettleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KettleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,11 +94,12 @@
 		F71ECF7A1BA4597800410953 /* TCup */ = {
 			isa = PBXGroup;
 			children = (
-				F7D552241BA47C4700334ECB /* Bluetooth */,
 				F71ECF7F1BA4597800410953 /* AppDelegate.h */,
 				F71ECF801BA4597800410953 /* AppDelegate.m */,
-				F71ECF821BA4597800410953 /* ViewController.h */,
-				F71ECF831BA4597800410953 /* ViewController.m */,
+				F7D5526F1BA4C7DA00334ECB /* Models */,
+				F7D552771BA4C7DA00334ECB /* Views */,
+				F7D5526A1BA4C7DA00334ECB /* Controllers */,
+				F7D552851BA4CE4B00334ECB /* Resources */,
 				F71ECF851BA4597800410953 /* Main.storyboard */,
 				F71ECF881BA4597800410953 /* Images.xcassets */,
 				F71ECF8A1BA4597800410953 /* LaunchScreen.xib */,
@@ -123,13 +134,42 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F7D552241BA47C4700334ECB /* Bluetooth */ = {
+		F7D5526A1BA4C7DA00334ECB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F7D552211BA47C4200334ECB /* BTDiscovery.h */,
-				F7D552221BA47C4200334ECB /* BTDiscovery.m */,
+				F7D5526B1BA4C7DA00334ECB /* TeaCollectionViewController.h */,
+				F7D5526C1BA4C7DA00334ECB /* TeaCollectionViewController.m */,
+				F7D552821BA4CDBE00334ECB /* KettleViewController.h */,
+				F7D552831BA4CDBE00334ECB /* KettleViewController.m */,
 			);
-			name = Bluetooth;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F7D5526F1BA4C7DA00334ECB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F7D552701BA4C7DA00334ECB /* Tea.h */,
+				F7D552711BA4C7DA00334ECB /* Tea.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F7D552771BA4C7DA00334ECB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7D552781BA4C7DA00334ECB /* TeaCollectionViewCell.h */,
+				F7D552791BA4C7DA00334ECB /* TeaCollectionViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F7D552851BA4CE4B00334ECB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F7D5525A1BA4C26600334ECB /* SmokeParticle.sks */,
+				F7D5525B1BA4C26600334ECB /* spark.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,9 +252,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7D5525D1BA4C26600334ECB /* spark.png in Resources */,
 				F71ECF871BA4597800410953 /* Main.storyboard in Resources */,
 				F71ECF8C1BA4597800410953 /* LaunchScreen.xib in Resources */,
 				F71ECF891BA4597800410953 /* Images.xcassets in Resources */,
+				F7D5525C1BA4C26600334ECB /* SmokeParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,9 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F71ECF841BA4597800410953 /* ViewController.m in Sources */,
+				F7D552841BA4CDBE00334ECB /* KettleViewController.m in Sources */,
+				F7D5527C1BA4C7DA00334ECB /* Tea.m in Sources */,
+				F7D5527A1BA4C7DA00334ECB /* TeaCollectionViewController.m in Sources */,
 				F71ECF811BA4597800410953 /* AppDelegate.m in Sources */,
-				F7D552231BA47C4200334ECB /* BTDiscovery.m in Sources */,
+				F7D5527F1BA4C7DA00334ECB /* TeaCollectionViewCell.m in Sources */,
 				F71ECF7E1BA4597800410953 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
