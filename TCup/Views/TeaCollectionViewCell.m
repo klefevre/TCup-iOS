@@ -28,7 +28,7 @@ static NSString *const kReuseIdentifier = @"TeaCollectionViewCell";
 - (void)setupWithTea:(Tea *)tea {
     self.imageView.image = [UIImage imageNamed:tea.imageName];
     self.temperatureLabel.text = [NSString stringWithFormat:@"%lu °C", (unsigned long)tea.temperature];
-    self.durationLabel.text = [NSString stringWithFormat:@"%lu mm", (unsigned long)tea.duration];
+    self.durationLabel.text = [NSString stringWithFormat:@"%lu s", (unsigned long)tea.duration];
 }
 
 @end
