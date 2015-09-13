@@ -20,6 +20,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-Bold" size:20.f],
+                                                           NSForegroundColorAttributeName: [UIColor whiteColor]}];
+
     [application registerUserNotificationSettings:
      [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound |
                                                    UIUserNotificationTypeAlert |

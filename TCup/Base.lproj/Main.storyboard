@@ -5,7 +5,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Select your tea-->
+        <!--SÉLECTIONNER VOTRE THÉ-->
         <scene sceneID="YZp-r9-UNk">
             <objects>
                 <collectionViewController id="nQ8-Fw-Lrq" customClass="TeaCollectionViewController" sceneMemberID="viewController">
@@ -71,13 +71,15 @@
                             <outlet property="delegate" destination="nQ8-Fw-Lrq" id="WH8-ce-w4c"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Select your tea" id="eZJ-tL-ckU"/>
+                    <navigationItem key="navigationItem" title="SÉLECTIONNER VOTRE THÉ" id="eZJ-tL-ckU">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Gfj-Ar-jpQ"/>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NbZ-BI-Hi0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-257" y="354"/>
         </scene>
-        <!--Kettle View Controller-->
+        <!--PRÉPARATION-->
         <scene sceneID="rez-M5-HAr">
             <objects>
                 <viewController id="ebc-26-IdO" customClass="KettleViewController" sceneMemberID="viewController">
@@ -263,7 +265,9 @@
                             <constraint firstAttribute="trailing" secondItem="tCz-m8-nck" secondAttribute="trailing" id="zNX-HV-khk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RRQ-eT-noW"/>
+                    <navigationItem key="navigationItem" title="PRÉPARATION" id="RRQ-eT-noW">
+                        <barButtonItem key="backBarButtonItem" title=" " id="WO9-CA-N4q"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="boilProgressView" destination="amI-YO-vdF" id="HSV-NE-Ea7"/>
                         <outlet property="boilView" destination="sa5-Xv-GmL" id="zIx-oX-X7W"/>
@@ -285,7 +289,7 @@
             </objects>
             <point key="canvasLocation" x="141" y="354"/>
         </scene>
-        <!--Cup View Controller-->
+        <!--TASSE-->
         <scene sceneID="nrI-Jy-tbi">
             <objects>
                 <viewController id="Kko-zG-Vyy" customClass="CupViewController" sceneMemberID="viewController">
@@ -464,7 +468,9 @@
                             <constraint firstAttribute="centerX" secondItem="9ZA-NU-ODU" secondAttribute="centerX" id="oJ0-jE-Zzl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RqP-fD-ypJ"/>
+                    <navigationItem key="navigationItem" title="TASSE" id="RqP-fD-ypJ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="KNi-ex-o7L"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="chooseTemperatureView" destination="YnC-nX-Ca4" id="hfU-MY-MP0"/>
                         <outlet property="containerView" destination="gEz-if-gqA" id="1FN-az-xKf"/>
@@ -551,6 +557,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="b9o-SY-egF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="nQ8-Fw-Lrq" kind="relationship" relationship="rootViewController" id="VNu-TJ-9y0"/>
