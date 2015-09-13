@@ -298,10 +298,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEz-if-gqA" userLabel="Container">
-                                <rect key="frame" x="0.0" y="326" width="320" height="160"/>
+                                <rect key="frame" x="0.0" y="316" width="320" height="180"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3uS-E2-LP3" userLabel="Wait">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre thé est bientôt prêt !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAh-fU-jke">
                                                 <rect key="frame" x="8" y="15" width="304" height="24"/>
@@ -310,30 +310,30 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9vO-0b-XP7">
-                                                <rect key="frame" x="8" y="69" width="304" height="2"/>
+                                                <rect key="frame" x="8" y="79" width="304" height="2"/>
                                                 <color key="progressTintColor" red="1" green="0.74117647060000003" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="trackTintColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                             </progressView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20°C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2M-0x-xrA">
-                                                <rect key="frame" x="8" y="79" width="32" height="20"/>
+                                                <rect key="frame" x="8" y="89" width="32" height="20"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80°C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRC-L7-vj6">
-                                                <rect key="frame" x="280" y="79" width="32" height="20"/>
+                                                <rect key="frame" x="280" y="89" width="32" height="20"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxX-k0-MIV">
-                                                <rect key="frame" x="140" y="79" width="40" height="28"/>
+                                                <rect key="frame" x="140" y="89" width="40" height="28"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_up" translatesAutoresizingMaskIntoConstraints="NO" id="us9-PU-s6s">
-                                                <rect key="frame" x="9" y="99" width="30" height="30"/>
+                                                <rect key="frame" x="9" y="109" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="NWN-WI-hKE"/>
                                                     <constraint firstAttribute="height" constant="30" id="vke-Pa-4cI"/>
@@ -359,23 +359,23 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YnC-nX-Ca4" userLabel="Choose">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="69R-P4-9Dz">
-                                                <rect key="frame" x="6" y="45" width="308" height="31"/>
+                                                <rect key="frame" x="6" y="55" width="308" height="31"/>
                                                 <color key="tintColor" red="1" green="0.6705882353" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="sliderValueChanged:" destination="Kko-zG-Vyy" eventType="valueChanged" id="VOu-PC-MIL"/>
                                                 </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80°C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDG-10-26I">
-                                                <rect key="frame" x="280" y="75" width="32" height="20"/>
+                                                <rect key="frame" x="280" y="85" width="32" height="20"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sélectionner votre température idéale :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gua-i9-sUG">
-                                                <rect key="frame" x="8" y="13" width="304" height="24"/>
+                                                <rect key="frame" x="8" y="23" width="304" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="afe-aW-52z"/>
                                                 </constraints>
@@ -384,14 +384,14 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20°C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYz-oU-M5o">
-                                                <rect key="frame" x="8" y="75" width="32" height="20"/>
+                                                <rect key="frame" x="8" y="85" width="32" height="20"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXH-iz-alc">
-                                                <rect key="frame" x="100" y="115" width="120" height="30"/>
-                                                <color key="backgroundColor" red="1" green="0.74117647060000003" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="100" y="135" width="120" height="30"/>
+                                                <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="1Jm-qg-423"/>
                                                     <constraint firstAttribute="height" constant="30" id="9Wb-cF-cBH"/>
@@ -409,7 +409,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NiR-P7-a21">
-                                                <rect key="frame" x="138" y="82" width="40" height="28"/>
+                                                <rect key="frame" x="138" y="92" width="40" height="28"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -437,7 +437,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="YnC-nX-Ca4" secondAttribute="bottom" id="7Ir-0u-J6V"/>
-                                    <constraint firstAttribute="height" constant="160" id="Q3j-zO-QS8"/>
+                                    <constraint firstAttribute="height" constant="180" id="Q3j-zO-QS8"/>
                                     <constraint firstItem="YnC-nX-Ca4" firstAttribute="top" secondItem="gEz-if-gqA" secondAttribute="top" id="fNg-bv-8CA"/>
                                     <constraint firstAttribute="bottom" secondItem="3uS-E2-LP3" secondAttribute="bottom" id="jKq-fC-igs"/>
                                     <constraint firstAttribute="trailing" secondItem="3uS-E2-LP3" secondAttribute="trailing" id="jhK-2p-pyx"/>
