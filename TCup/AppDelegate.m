@@ -19,6 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[SocketService sharedInstance] connect:@"http://192.168.100.183:1337"];
 
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-Bold" size:20.f],
@@ -31,7 +32,9 @@
                                        categories:nil]];
     [application registerForRemoteNotifications];
 
-    [[SocketService sharedInstance] connect:@"http://192.168.100.183:1337"];
+    if (launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey]) {
+        [[SocketService sharedInstance].socket emit:@"enjoy"];
+    }
 
     return YES;
 }

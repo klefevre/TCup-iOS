@@ -8,6 +8,7 @@
 
 #import "KettleViewController.h"
 #import "Tea.h"
+#import "SocketService.h"
 
 static NSTimeInterval const kDurationSleep = 0.05;
 
@@ -58,6 +59,8 @@ static NSTimeInterval const kDurationSleep = 0.05;
     self.infusionCurrentLabel.text = @"";
     self.infusionProgressView.progress = 0.f;
 
+    [[SocketService sharedInstance].socket emit:@"setBoil"];
+
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
             for (self.boilProgress = 0; self.boilProgress < self.selectedTea.temperature; self.boilProgress++) {
@@ -83,6 +86,8 @@ static NSTimeInterval const kDurationSleep = 0.05;
 - (IBAction)startInfusion:(id)sender {
     self.boilView.alpha = 0.f;
     self.infusionView.hidden = NO;
+
+    [[SocketService sharedInstance].socket emit:@"infuse"];
 
     [UIView transitionWithView:self.containerView
                       duration:0.7
