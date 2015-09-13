@@ -33,7 +33,7 @@
     [application registerForRemoteNotifications];
 
     if (launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey]) {
-        [[SocketService sharedInstance].socket emit:@"enjoy"];
+//        [[SocketService sharedInstance].socket emit:@"enjoy"];
     }
 
     return YES;
