@@ -69,6 +69,10 @@ typedef NS_ENUM(NSInteger, CupViewControllerStep) {
             }
             self.curTempLabel.text = [NSString stringWithFormat:@"%.0f °C", temp];
             self.progressView.progress = temp / maxTemp;
+
+            if (temp <= self.temperatureSlider.value) {
+                [self performSegueWithIdentifier:@"readySegue" sender:nil];
+            }
         }
         NSLog(@"args: %@", args);
     }];
