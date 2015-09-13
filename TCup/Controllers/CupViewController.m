@@ -14,7 +14,7 @@
 #import "SocketService.h"
 
 static CGFloat const kMinTemperature = 20.f;
-static CGFloat const kMaxTemperature = 80.f;
+static CGFloat const kMaxTemperature = 50.f;
 
 typedef NS_ENUM(NSInteger, CupViewControllerStep) {
     CupViewControllerStepChooseTemperature,
@@ -55,27 +55,6 @@ typedef NS_ENUM(NSInteger, CupViewControllerStep) {
     self.temperatureSlider.maximumValue = kMaxTemperature;
     self.temperatureSlider.value = (kMinTemperature + kMaxTemperature) / 2.f;
     self.temperatureChosenLabel.text = [NSString stringWithFormat:@"%.0f °C", self.temperatureSlider.value];
-
-    __block CGFloat maxTemp = 0.1;
-    @weakify(self);
-    [[SocketService sharedInstance].socket on:@"celsius" callback:^(NSArray *args) {
-        @strongify(self);
-        NSNumber *tempNumber = [args firstObject];
-        if (tempNumber != nil) {
-            CGFloat temp = [tempNumber floatValue];
-            if (temp > maxTemp) {
-                maxTemp = temp;
-                self.maxTempLabel.text = [NSString stringWithFormat:@"%.0f °C", maxTemp];
-            }
-            self.curTempLabel.text = [NSString stringWithFormat:@"%.0f °C", temp];
-            self.progressView.progress = temp / maxTemp;
-
-            if (temp <= self.temperatureSlider.value) {
-                [self performSegueWithIdentifier:@"readySegue" sender:nil];
-            }
-        }
-        NSLog(@"args: %@", args);
-    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -102,6 +81,28 @@ typedef NS_ENUM(NSInteger, CupViewControllerStep) {
                                 self.waitGoodTemperatureView.alpha = 1.0;
                             }
                             completion:NULL];
+
+            __block CGFloat maxTemp = 0.1;
+            @weakify(self);
+            [[SocketService sharedInstance].socket on:@"celsius" callback:^(NSArray *args) {
+                @strongify(self);
+                NSNumber *tempNumber = [args firstObject];
+                if (tempNumber != nil) {
+                    CGFloat temp = [tempNumber floatValue];
+                    if (temp > maxTemp) {
+                        maxTemp = temp;
+                        self.maxTempLabel.text = [NSString stringWithFormat:@"%.0f °C", maxTemp];
+                    }
+                    self.curTempLabel.text = [NSString stringWithFormat:@"%.0f °C", temp];
+                    self.progressView.progress = temp / maxTemp;
+
+                    if (temp <= self.temperatureSlider.value) {
+                        [self performSegueWithIdentifier:@"readySegue" sender:nil];
+                    }
+                }
+                NSLog(@"args: %@", args);
+            }];
+
             break;
     }
 }
