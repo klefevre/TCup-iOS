@@ -6,8 +6,12 @@
 //  Copyright (c) 2015 BeMyApp. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface KettleViewController : NSObject
+@class Tea;
+
+@interface KettleViewController : UIViewController
+
+@property (nonatomic, strong) Tea *selectedTea;
 
 @end

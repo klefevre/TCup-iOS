@@ -10,6 +10,8 @@
 #import "Tea.h"
 #import "TeaCollectionViewCell.h"
 
+#import "KettleViewController.h"
+
 @interface TeaCollectionViewController ()
 
 @property (nonatomic, strong) NSArray *teas;
@@ -23,11 +25,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.teas = @[[Tea teaWithImageName:@"01" withDuration:100 withTemperature:100],
-                  [Tea teaWithImageName:@"02" withDuration:100 withTemperature:100],
-                  [Tea teaWithImageName:@"03" withDuration:100 withTemperature:100],
-                  [Tea teaWithImageName:@"04" withDuration:100 withTemperature:100],
-                  [Tea teaWithImageName:@"05" withDuration:100 withTemperature:100]];
+    self.teas = @[[Tea teaWithImageName:@"01" withDuration:100 withTemperature:150],
+                  [Tea teaWithImageName:@"02" withDuration:140 withTemperature:80],
+                  [Tea teaWithImageName:@"03" withDuration:60 withTemperature:110],
+                  [Tea teaWithImageName:@"04" withDuration:90 withTemperature:120],
+                  [Tea teaWithImageName:@"05" withDuration:160 withTemperature:100]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,7 +40,8 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
+    KettleViewController *vc = (id)segue.destinationViewController;
+    vc.selectedTea = self.teas[[self.collectionView indexPathForCell:sender].row];
 }
 
 #pragma mark UICollectionViewDataSource
