@@ -51,6 +51,7 @@
 
         [socket on:@"connected" callback:^(NSArray *args) {
             NSLog(@"args: %@", args);
+            [socket emit:@"selection"];
         }];
     }];
 }
