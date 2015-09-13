@@ -18,6 +18,8 @@
 #pragma mark - UIApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    application.applicationIconBadgeNumber = 0;
+
     // Override point for customization after application launch.
     [[SocketService sharedInstance] connect:@"http://192.168.100.183:1337"];
 
